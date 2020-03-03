@@ -4,7 +4,9 @@
 
 html {
   box-sizing: border-box;
+  font-size: $base__font-size;
   font-size: 1rem;
+  font-weight: $base__font-weight;
 }
 
 *,
@@ -16,6 +18,7 @@ html {
 
 body {
   background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  padding: 1rem;
 }
 
 blockquote,

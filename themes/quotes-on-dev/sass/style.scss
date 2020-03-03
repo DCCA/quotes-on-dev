@@ -46,9 +46,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "variables";
 @import "mixins";
 
-// CSS included in style.css.
+// Add reset
+@import 'reset';
 
-@import "normalize";
+// CSS included in style.css.
 @import "fonts";
 @import "typography";
 @import "elements";
