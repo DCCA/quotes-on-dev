@@ -8,12 +8,11 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-        
+        <main id="main" class="site-main" role="main">
         <?php if(is_user_logged_in()) : ?>
-            <p>Is looged in</p>    
-                <?php else : ?>
-            <p>Is not looged in</p>
+            <?php get_template_part('template-parts/content', 'loggedin')  ?> 
+        <?php else : ?>
+            <?php get_template_part('template-parts/content', 'notloggedin') ?>
         <?php endif;  ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->

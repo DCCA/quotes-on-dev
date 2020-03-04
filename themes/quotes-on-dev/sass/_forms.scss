@@ -26,6 +26,12 @@ input[type="submit"] {
 	}
 }
 
+input[type="submit"]{
+    font-size: 1rem;
+    margin-top: 2rem;
+    width: 50%;
+}
+
 /* Fields */
 
 input[type="text"],
@@ -34,8 +40,9 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
+    background-color: $color__background-body;
 	color: #666;
-	border: 1px solid #ccc;
+	border: $border__button;
 	border-radius: 3px;
 
 	&:focus {
@@ -55,3 +62,21 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+
+/* Submit Form */
+.submit-form-wrapper{
+    form{
+        display: flex;
+        flex-direction: column;
+        input{
+            width: 60%;
+        }
+        label{
+            margin: 1rem 0;
+        }
+    }
+}
+
+
+
+
