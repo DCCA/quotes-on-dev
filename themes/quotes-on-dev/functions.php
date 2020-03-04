@@ -62,14 +62,10 @@ function qod_scripts() {
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 
 	// Add api scripts
-	wp_enqueue_script( 'quotes-api', get_template_directory_uri() . '/build/js/quotes-api.min.js', array('jquery'), false, true );
+	wp_enqueue_script( 'quotes-api', get_template_directory_uri() . '/build/js/quotes-api.min.js', array(), false, true );
 
 	wp_localize_script('quotes-api', 'api_vars', array(
 		'url'   => esc_url_raw(rest_url()),
-		'id'    => new WP_Query( array ( 
-			'orderby' => 'rand', 
-			'posts_per_page' => '1' 
-		)),
 	));
 
 }
@@ -94,3 +90,24 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+
+// Enable the Rand order in the REST Api
+/**
+ * Plugin Name: REST API - Post list randomize
+ * Description: Randomize the content list in REST API passing `orderby=rand` as parameter.
+ * Version:     1.0.0
+ * Author:      Felipe Elia | Codeable
+ * Author URI:  https://codeable.io/developers/felipe-elia?ref=qGTOJ
+ */
+/**
+ * Add `rand` as an option for orderby param in REST API.
+ * Hook to `rest_{$this->post_type}_collection_params` filter.
+ *
+ * @param array $query_params Accepted parameters.
+ * @return array
+ */
+function add_rand_orderby_rest_post_collection_params( $query_params ) {
+	$query_params['orderby']['enum'][] = 'rand';
+	return $query_params;
+}
+add_filter( 'rest_post_collection_params', 'add_rand_orderby_rest_post_collection_params' );

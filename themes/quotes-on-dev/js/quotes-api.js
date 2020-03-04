@@ -1,13 +1,11 @@
-(function($) {
+(function() {
     const button = document.getElementById('get-new-quote');
-    const param = 'wp/v2/posts?id=' + api_vars.id;
+    const param = 'wp/v2/posts?orderby=rand&per_page=1';
     const url = api_vars.url + param;
-    console.log(url);
-    console.log(api_vars.id);
     button.addEventListener('click', () => {
         fetch(url)
+            .then(response => response.json())
             .then(data => console.log(data))
-            .catch();
+            .catch(err => console.log(err));
     })
-    // console.log(api_vars.url)
-}(jQuery))
+}())
