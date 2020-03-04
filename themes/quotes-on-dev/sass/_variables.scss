@@ -25,6 +25,10 @@ $color__link: #00cc00;
 $color__link-visited: #00cc00;
 $color__link-hover: #090;
 
+$color__background-button: #222222;
+$color__tex-button: #00cc00;
+$color__tex-button-hover: #090;
+
 // Typography
 
 $font__main: 'Exo', sans-serif;
@@ -35,3 +39,5 @@ $font__line-height-pre: 1.6;
 
 // Borders
 $border__dashed: 1px dashed #ffffff;
+$border__button: 2px solid #00cc00;
+$border__button-hover: 2px solid #090;
