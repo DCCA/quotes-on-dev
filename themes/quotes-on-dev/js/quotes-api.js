@@ -17,11 +17,14 @@
 
     // Handler functions
     function changePost(postData){
+        // Check if is home
+        if(api_vars.isHome){
         const entryContent = document.querySelector('.entry-content');
         const entryHeader = document.querySelector('.entry-header');
 
         entryContent.innerHTML = postData[0].content.rendered;
         entryHeader.innerHTML = postData[0].title.rendered;
+        }
     }
 
 }())

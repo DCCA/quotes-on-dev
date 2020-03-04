@@ -66,6 +66,7 @@ function qod_scripts() {
 
 	wp_localize_script('quotes-api', 'api_vars', array(
 		'url'   => esc_url_raw(rest_url()),
+		'isHome'  => is_home(),
 	));
 
 }
