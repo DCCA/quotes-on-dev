@@ -48,7 +48,7 @@ get_header(); ?>
 			<ul>
 				<?php foreach ( $tags as $tag): ?>
 					<li>
-						<a hr	ef="<?php echo get_tag_link($tag)?>"><?php echo $tag->name ?></a>
+						<a href="<?php echo get_tag_link($tag)?>"><?php echo $tag->name ?></a>
 					</li>
 				<?php endforeach; ?>
 			</ul>

@@ -130,3 +130,12 @@ a {
 		width: 50%;
 	}
 }
+/* Pagination */
+.pagination-wrapper{
+    padding-top: 3rem;
+    border-top: $border__dashed;
+    a, 
+    span{
+        padding-right: 1rem;
+    }
+}

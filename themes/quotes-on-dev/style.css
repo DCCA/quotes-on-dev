@@ -403,6 +403,14 @@ a {
   text-align: right;
   width: 50%; }
 
+/* Pagination */
+.pagination-wrapper {
+  padding-top: 3rem;
+  border-top: 1px dashed #ffffff; }
+  .pagination-wrapper a,
+  .pagination-wrapper span {
+    padding-right: 1rem; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -507,4 +515,7 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
+.archive .post {
+  border-top: 1px dashed #ffffff; }
+
 /* Submit a Quote Page */
