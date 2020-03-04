@@ -60,6 +60,18 @@ function qod_scripts() {
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+
+	// Add api scripts
+	wp_enqueue_script( 'quotes-api', get_template_directory_uri() . '/build/js/quotes-api.min.js', array('jquery'), false, true );
+
+	wp_localize_script('quotes-api', 'api_vars', array(
+		'url'   => esc_url_raw(rest_url()),
+		'id'    => new WP_Query( array ( 
+			'orderby' => 'rand', 
+			'posts_per_page' => '1' 
+		)),
+	));
+
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
 
