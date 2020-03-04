@@ -132,7 +132,14 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  margin: 1rem 0; }
+
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1.25rem; }
 
 /* Copy */
 p {
@@ -198,7 +205,8 @@ html {
 body {
   background: #222222;
   /* Fallback for when there is no custom background color defined. */
-  padding: 1rem; }
+  padding: 1rem;
+  font-size: 1rem; }
 
 blockquote,
 q {
@@ -214,15 +222,20 @@ hr {
   height: 1px;
   margin-bottom: 1.5rem; }
 
-ul,
-ol {
-  margin: 0 0 1.5rem 3rem; }
-
 ul {
-  list-style: disc; }
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 ol {
   list-style: decimal; }
+
+li {
+  margin-bottom: .5rem;
+  margin-right: 1.125rem; }
 
 li > ul,
 li > ol {
@@ -309,7 +322,8 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #00cc00; }
+  color: #00cc00;
+  text-decoration: none; }
   a:visited {
     color: #00cc00; }
   a:hover, a:focus, a:active {

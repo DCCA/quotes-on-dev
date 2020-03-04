@@ -19,6 +19,7 @@ html {
 body {
   background: $color__background-body; /* Fallback for when there is no custom background color defined. */
   padding: 1rem;
+  font-size: 1rem;
 }
 
 blockquote,
@@ -38,23 +39,26 @@ hr {
   margin-bottom: $base__space-unit;
 }
 
-ul,
-ol {
-  margin: 0 0 $base__space-unit ($base__space-unit * 2);
-}
-
 ul {
-  list-style: disc;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 ol {
   list-style: decimal;
 }
 
+li{
+  margin-bottom: .5rem;
+  margin-right: 1.125rem;
+}
+
 li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: $base__space-unit;
+  
 }
 
 dt {
