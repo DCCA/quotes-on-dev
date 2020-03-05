@@ -304,7 +304,7 @@ input[type="password"],
 input[type="search"],
 textarea {
   background-color: #222222;
-  color: #666;
+  color: #fff;
   border: 2px solid #00cc00;
   border-radius: 3px; }
   input[type="text"]:focus,
@@ -313,7 +313,7 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #fff; }
 
 input[type="text"],
 input[type="email"],

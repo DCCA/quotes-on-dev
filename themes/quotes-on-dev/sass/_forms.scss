@@ -41,12 +41,11 @@ input[type="password"],
 input[type="search"],
 textarea {
     background-color: $color__background-body;
-	color: #666;
+	color: #fff;
 	border: $border__button;
 	border-radius: 3px;
-
 	&:focus {
-		color: #111;
+		color: #fff;
 	}
 }
 

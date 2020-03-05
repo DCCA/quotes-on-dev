@@ -19,7 +19,8 @@
     "jQuery": false,
     "$": false,
     "_": false,
-    "api_var": false
+    "apiGetVars": false,
+    "apiVars": false
   },
   "env": {
     "es6": true,
