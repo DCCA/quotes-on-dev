@@ -22,7 +22,7 @@
             method: 'POST',
             credentials: 'include',
             headers: {
-                'content-type': 'aplication/json',
+                'content-type': 'application/json',
                 'X-Wp-Nonce'  : apiVars.nonce
             },
             body: JSON.stringify(postData)
@@ -30,6 +30,4 @@
             .then(response => console.log(response))
             .catch(err => console.log(err));
     })
-
-
 }())

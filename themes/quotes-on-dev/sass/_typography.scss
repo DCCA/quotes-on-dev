@@ -78,10 +78,20 @@ big {
 
 // For specific classes
 .post{
-    p {
-        font-size: 1.75rem;
-    }
-    h2{
-        font-size: 1.25rem;
+    .entry-header{
+	display: flex;
+	align-items: center;
+	.source{
+	    padding-left: .4rem;
+	    a{
+		font-size: 1.25rem;
+	    }
+	}
+	p {
+	    font-size: 1.75rem;
+	}
+	h2{
+	    font-size: 1.25rem;
+	}
     }
 }

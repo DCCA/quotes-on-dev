@@ -19,18 +19,12 @@ input[type="submit"] {
 		color: $color__tex-button-hover;
 		border: $border__button-hover;
 	}
-
 	&:active,
 	&:focus {
 		border-color: $border__button-hover;
 	}
 }
 
-input[type="submit"]{
-    font-size: 1rem;
-    margin-top: 2rem;
-    width: 50%;
-}
 
 /* Fields */
 
@@ -74,7 +68,26 @@ textarea {
             margin: 1rem 0;
         }
     }
+    input[type="submit"]{
+	font-size: 1rem;
+	margin-top: 2rem;
+	width: 50%;
+    }
 }
+
+/* Search Form */
+.search-field{
+    &:active,
+    &:focus{
+	border-color: white;
+    }
+}
+.search-submit{
+    border: none;
+    padding: 0.75rem; 
+}
+
+
 
 
 

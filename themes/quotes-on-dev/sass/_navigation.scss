@@ -31,6 +31,9 @@ a {
 	display: block;
 	float: left;
 	width: 100%;
+	@include tablet {
+	    width: auto;
+	}
 
 	ul {
 		display: block;

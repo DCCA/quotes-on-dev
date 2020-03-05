@@ -179,11 +179,21 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.post p {
-  font-size: 1.75rem; }
-
-.post h2 {
-  font-size: 1.25rem; }
+.post .entry-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .post .entry-header .source {
+    padding-left: .4rem; }
+    .post .entry-header .source a {
+      font-size: 1.25rem; }
+  .post .entry-header p {
+    font-size: 1.75rem; }
+  .post .entry-header h2 {
+    font-size: 1.25rem; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -291,11 +301,6 @@ input[type="submit"] {
   input[type="submit"]:focus {
     border-color: 2px solid #090; }
 
-input[type="submit"] {
-  font-size: 1rem;
-  margin-top: 2rem;
-  width: 50%; }
-
 /* Fields */
 input[type="text"],
 input[type="email"],
@@ -340,6 +345,19 @@ textarea {
   .submit-form-wrapper form label {
     margin: 1rem 0; }
 
+.submit-form-wrapper input[type="submit"] {
+  font-size: 1rem;
+  margin-top: 2rem;
+  width: 50%; }
+
+/* Search Form */
+.search-field:active, .search-field:focus {
+  border-color: white; }
+
+.search-submit {
+  border: none;
+  padding: 0.75rem; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -362,6 +380,9 @@ a {
   display: block;
   float: left;
   width: 100%; }
+  @media (min-width: 640px) {
+    .main-navigation {
+      width: auto; } }
   .main-navigation ul {
     display: block;
     list-style: none;
@@ -538,4 +559,13 @@ object {
 .archive .post {
   border-top: 1px dashed #ffffff; }
 
-/* Submit a Quote Page */
+/* Search Result */
+.search-results .page-header {
+  border-bottom: 1px dashed #ffffff; }
+
+.search-results .entry-header h2 {
+  font-weight: 900;
+  font-size: 1.5rem; }
+
+.search-results .entry-summary p {
+  font-size: 1.25rem; }

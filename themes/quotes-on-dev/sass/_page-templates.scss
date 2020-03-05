@@ -9,4 +9,20 @@
     }
 }
 
-/* Submit a Quote Page */
+/* Search Result */
+.search-results{
+    .page-header{
+	border-bottom:$border__dashed;
+    }
+    .entry-header{
+	h2{
+	    font-weight: 900;
+	    font-size: 1.5rem;
+	}	
+    }
+    .entry-summary{
+	p{
+	    font-size: 1.25rem;
+	}	
+    }
+}

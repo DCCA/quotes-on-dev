@@ -13,5 +13,10 @@
 	</div><!-- .entry-content -->
 	<div class="entry-header">
 		<?php the_title( '<h2 class="entry-title">— ', '</h2>' ); ?>
+		<span class="source">
+		    <a href="<?php echo get_post_field('_qod_quote_source_url'); ?>">
+			<?php echo get_post_field('_qod_quote_source'); ?>
+		    </a>    
+		<span>
 	</div><!-- .entry-header -->
 </article><!-- #post-## -->
