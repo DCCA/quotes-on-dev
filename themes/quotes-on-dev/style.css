@@ -193,6 +193,9 @@ big {
     display: inline;
     font-size: 1.25rem; }
 
+.post .entry-content p {
+  font-size: 2.5rem; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -214,10 +217,35 @@ body {
   background: #222222;
   /* Fallback for when there is no custom background color defined. */
   padding: 1rem;
-  font-size: 1rem; }
+  font-size: 1rem;
+  margin: 0 auto; }
+  @media (min-width: 1080px) {
+    body {
+      max-width: 1080px; } }
+
+@media (min-width: 1080px) {
+  .site-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .site-header img {
+      height: 7rem; } }
 
 footer {
   margin-top: 3rem; }
+  @media (min-width: 1080px) {
+    footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: end; } }
+  footer .site-info {
+    padding-left: 1rem; }
 
 blockquote,
 q {
@@ -407,10 +435,15 @@ a {
       left: auto; }
   .main-navigation li {
     float: left;
-    position: relative; }
+    position: relative;
+    margin: 0;
+    padding: 0 1rem;
+    border-right: 1px solid white; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
+  .main-navigation .site-info {
+    padding: 0 1rem; }
 
 /* Small menu. */
 .menu-toggle,
@@ -532,6 +565,38 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5rem; }
+
+@media (min-width: 1080px) {
+  .site-content {
+    display: grid;
+    grid-template-columns: 175px 1fr 175px; }
+    .site-content::before {
+      margin: 0 auto;
+      font-family: 'Font Awesome 5 Free';
+      content: '\f10d';
+      font-weight: 900;
+      color: #00cc00;
+      font-size: 8rem; }
+    .site-content::after {
+      margin: 0 auto;
+      font-family: 'Font Awesome 5 Free';
+      content: '\f10e';
+      font-weight: 900;
+      color: #00cc00;
+      font-size: 8rem; } }
+
+.home .site-main,
+.single-post .site-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 /*--------------------------------------------------------------
 # Media
