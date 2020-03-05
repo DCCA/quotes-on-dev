@@ -180,9 +180,6 @@ big {
   font-size: 125%; }
 
 .post .entry-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
@@ -193,6 +190,7 @@ big {
   .post .entry-header p {
     font-size: 1.75rem; }
   .post .entry-header h2 {
+    display: inline;
     font-size: 1.25rem; }
 
 /*--------------------------------------------------------------

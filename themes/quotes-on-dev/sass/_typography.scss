@@ -79,7 +79,6 @@ big {
 // For specific classes
 .post{
     .entry-header{
-	display: flex;
 	align-items: center;
 	.source{
 	    padding-left: .4rem;
@@ -91,6 +90,7 @@ big {
 	    font-size: 1.75rem;
 	}
 	h2{
+	    display: inline;
 	    font-size: 1.25rem;
 	}
     }
