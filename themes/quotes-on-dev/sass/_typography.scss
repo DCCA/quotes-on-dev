@@ -115,3 +115,23 @@ big {
 	font-weight: 900;
     }
 }
+// Feedbacks Styling
+.feedback-wrap {
+    .alert {
+	background-color: #cc3300;
+    }
+    .success {
+	background-color: $color__tex-button;
+    }
+    p{
+	border-radius: 3px;
+	padding: 1rem;
+	margin-top: 1.5rem;
+	font-weight: 900;
+    }
+}
+
+
+
+
+

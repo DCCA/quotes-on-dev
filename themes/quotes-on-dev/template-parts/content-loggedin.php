@@ -22,7 +22,8 @@
             <input type="text" name="where" id="" value="">
             <label for="url">Provice the URL of the quote source, if available.</label>
             <input type="text" name="url" id="" value="">
-            <input type="submit" name="submit" id="new-quote-submit" value="Send Quote">
-        </form>
+	    <input type="submit" name="submit" id="new-quote-submit" value="Send Quote">
+	    <div class="feedback-wrap"></div>
+	</form>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

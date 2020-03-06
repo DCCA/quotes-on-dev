@@ -13,10 +13,12 @@
 	</div><!-- .entry-content -->
 	<div class="entry-header">
 		<?php the_title( '<h2 class="entry-title">— ', '</h2>' ); ?>
+		<?php if(!is_archive()) : ?>
 		<span class="source">
 		    <a href="<?php echo get_post_field('_qod_quote_source_url'); ?>">
 			<?php echo get_post_field('_qod_quote_source'); ?>
 		    </a>    
 		<span>
+		<?php endif; ?>
 	</div><!-- .entry-header -->
 </article><!-- #post-## -->
