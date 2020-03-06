@@ -573,7 +573,7 @@ a {
   margin: 0 0 1.5rem; }
 
 .site-content {
-  margin-top: 4.5rem; }
+  margin: 4.5rem 1rem 0; }
   @media (min-width: 1080px) {
     .site-content {
       display: grid;

@@ -3,7 +3,6 @@
     const submitQuoteForm = document.querySelector('.submit-quote-form');
     const param = 'wp/v2/posts';
     const url = apiVars.url + param;
-    console.log(url);
 
     // Add event listeners
     submitQuoteForm.addEventListener('submit', event => {
@@ -15,8 +14,6 @@
             '_qod_quote_source_url': event.target[3].value,
             'status'               : 'publish'
         }
-        console.log(postData);
-        console.log(apiVars);
         // Make the API call
         fetch(url,{
             method: 'POST',
