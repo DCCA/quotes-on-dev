@@ -47,6 +47,8 @@ footer{
   @include desktop {
       display: flex;
       justify-content: end;
+  }
+  @include tablet {
       p{
 	padding-left: 1rem;
       }

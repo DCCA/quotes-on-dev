@@ -122,3 +122,25 @@ function add_rand_orderby_rest_post_collection_params( $query_params ) {
 	return $query_params;
 }
 add_filter( 'rest_post_collection_params', 'add_rand_orderby_rest_post_collection_params' );
+
+// Customize the logo on the admins page
+function quotes_admin_set_logo(){
+	echo '
+	<style>
+	.login {
+	    background-color: #222;
+	}
+	.login h1 a{
+		background-image: url(' . get_template_directory_uri() . '/assets/qod-logo.svg);
+		background-size: contain;
+		width: auto;
+	}
+	</style>';
+}
+add_action('login_header', 'quotes_admin_set_logo');
+
+// Change the logo link in admins page
+function quotes_admin_change_url(){
+    return get_home_url();
+}
+add_filter('login_headerurl', 'quotes_admin_change_url');

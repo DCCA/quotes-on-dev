@@ -267,9 +267,10 @@ footer {
       display: flex;
       -webkit-box-pack: end;
           -ms-flex-pack: end;
-              justify-content: end; }
-      footer p {
-        padding-left: 1rem; } }
+              justify-content: end; } }
+  @media (min-width: 640px) {
+    footer p {
+      padding-left: 1rem; } }
   footer .site-info p {
     display: inline; }
 
