@@ -33,7 +33,7 @@
 }
 
 .site-content {
-    margin: 4.5rem 1rem 0;
+    margin-top: 4.5rem;
     @include desktop {
 	display: grid;
 	grid-template-columns: 175px 1fr 175px;
@@ -59,8 +59,10 @@
 .home,
 .single-post {
     .site-main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include desktop {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	}
     }
 }

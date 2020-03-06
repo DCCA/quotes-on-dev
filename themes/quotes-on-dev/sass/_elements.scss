@@ -28,6 +28,11 @@ body {
 
 .site-header{
     margin-top: 3rem;
+    @include tablet {
+	img {
+	    height: 5rem;
+	}
+    }
     @include desktop {
 	display:  flex;
 	justify-content: center;
@@ -42,9 +47,14 @@ footer{
   @include desktop {
       display: flex;
       justify-content: end;
+      p{
+	padding-left: 1rem;
+      }
   }
   .site-info {
-      padding-left: 1rem;
+      p {
+	display: inline;
+      }
   }
 }
 

@@ -14,7 +14,7 @@
 					<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
 				</nav><!-- #site-navigation -->
 				<div class="site-info">
-					<?php printf( esc_html( 'Brought to you by %s' ), '' ); ?>
+					<p><?php printf( esc_html( 'Brought to you by %s' ), '' ); ?></p>
 					<a href="<?php echo esc_url( 'https://github.com/DCCA' ); ?>">DCCA</a>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
