@@ -196,6 +196,12 @@ big {
 .post .entry-content p {
   font-size: 2.5rem; }
 
+.list-custom-archive a {
+  font-size: 1.25rem; }
+
+.error404 h1 {
+  font-weight: 900; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -223,19 +229,21 @@ body {
     body {
       max-width: 1080px; } }
 
-@media (min-width: 1080px) {
-  .site-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .site-header img {
-      height: 7rem; } }
+.site-header {
+  margin-top: 3rem; }
+  @media (min-width: 1080px) {
+    .site-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .site-header img {
+        height: 7rem; } }
 
 footer {
-  margin-top: 3rem; }
+  margin-top: 5rem; }
   @media (min-width: 1080px) {
     footer {
       display: -webkit-box;
@@ -442,8 +450,6 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none; }
-  .main-navigation .site-info {
-    padding: 0 1rem; }
 
 /* Small menu. */
 .menu-toggle,
@@ -566,24 +572,26 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
-@media (min-width: 1080px) {
-  .site-content {
-    display: grid;
-    grid-template-columns: 175px 1fr 175px; }
-    .site-content::before {
-      margin: 0 auto;
-      font-family: 'Font Awesome 5 Free';
-      content: '\f10d';
-      font-weight: 900;
-      color: #00cc00;
-      font-size: 8rem; }
-    .site-content::after {
-      margin: 0 auto;
-      font-family: 'Font Awesome 5 Free';
-      content: '\f10e';
-      font-weight: 900;
-      color: #00cc00;
-      font-size: 8rem; } }
+.site-content {
+  margin-top: 4.5rem; }
+  @media (min-width: 1080px) {
+    .site-content {
+      display: grid;
+      grid-template-columns: 175px 1fr 175px; }
+      .site-content::before {
+        margin: 0 auto;
+        font-family: 'Font Awesome 5 Free';
+        content: '\f10d';
+        font-weight: 900;
+        color: #00cc00;
+        font-size: 8rem; }
+      .site-content::after {
+        margin: 0 auto;
+        font-family: 'Font Awesome 5 Free';
+        content: '\f10e';
+        font-weight: 900;
+        color: #00cc00;
+        font-size: 8rem; } }
 
 .home .site-main,
 .single-post .site-main {

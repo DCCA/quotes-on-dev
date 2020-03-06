@@ -33,6 +33,7 @@
 }
 
 .site-content {
+    margin-top: 4.5rem;
     @include desktop {
 	display: grid;
 	grid-template-columns: 175px 1fr 175px;

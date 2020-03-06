@@ -25,7 +25,7 @@ get_header(); ?>
 			 $rands_posts = get_posts( $args ); ?>
 
 			<h2>Quotes Authors</h2>
-			<ul>
+			<ul class="list-custom-archive">
 				<?php foreach ( $rands_posts as $post ) : setup_postdata( $post ); ?>
 					<?php get_template_part( 'template-parts/content', 'archive' ); ?>
 				<?php endforeach; wp_reset_postdata(); ?>
@@ -34,7 +34,7 @@ get_header(); ?>
 			<?php
 			$categories = get_categories();?>
 			<h2>Categories</h2>
-			<ul>
+			<ul class="list-custom-archive">
 				<?php foreach ( $categories as $category): ?>
 					<li>
 						<a href="<?php echo get_category_link($category) ?>"><?php echo $category->name ?></a>
@@ -45,7 +45,7 @@ get_header(); ?>
 			<?php
 			$tags = get_tags(); ?>
 			<h2>Tags</h2>
-			<ul>
+			<ul class="list-custom-archive">
 				<?php foreach ( $tags as $tag): ?>
 					<li>
 						<a href="<?php echo get_tag_link($tag)?>"><?php echo $tag->name ?></a>
