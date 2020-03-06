@@ -75,7 +75,8 @@ function qod_scripts() {
 	wp_localize_script('quotes-post-api','apiVars', array(
 	    'url'   => esc_url_raw(rest_url()),
 	    'nonce' => wp_create_nonce('wp_rest'),
-
+	    'isSubmit' => is_page('submit'),
+	    'isLogIn' => is_user_logged_in(),
         ));
 
 

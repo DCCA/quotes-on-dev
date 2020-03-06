@@ -1,4 +1,5 @@
 (function() {
+    if(apiVars.isSubmit && apiVars.isLogIn !== ''){
     // Declare vars
     const submitQuoteForm = document.querySelector('.submit-quote-form');
     const param = 'wp/v2/posts';
@@ -33,13 +34,13 @@
 			    message: 'Thanks for sending one more quote!',
 			    addClass: 'success'
 			};
-			handlerSubmit(successMsg);
+			handlerSubmit(successMsg, feedbackWrapper);
 		    } else {
 			const errorMsg = {
 			    message: 'Something went wrong. Please try again!',
 			    addClass: 'alert'
 			}
-			handlerSubmit(errorMsg);
+			handlerSubmit(errorMsg, feedbackWrapper);
 		    }
 		})
 		.catch(err => console.log(err));
@@ -48,9 +49,10 @@
 		message: 'Something went wrong. Please try again!',
 		addClass: 'alert'
 	    }
-	    handlerSubmit(errorMsg);
+	    handlerSubmit(errorMsg, feedbackWrapper);
 	}
     });
+    }
     function resetFields(form){
 	// Get the forms field
 	const title = form[0];
@@ -63,7 +65,7 @@
 	source.value = '';
 	sourceUrl.value = '';
     }
-    function handlerSubmit(message){
+    function handlerSubmit(message, feedbackWrapper){
 	// Insert feedback in feedback wrapper
 	feedbackWrapper.innerHTML = '';
 	const feedback = document.createElement('p');

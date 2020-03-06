@@ -3,7 +3,8 @@
     const button = document.getElementById('get-new-quote');
     const param = 'wp/v2/posts?orderby=rand&per_page=1';
     const url = apiGetVars.url + param;
-
+    
+    if(apiGetVars.isHome){
     // Add event listeners
     button.addEventListener('click', () => {
         // Make the API call
@@ -14,7 +15,7 @@
             })
             .catch(err => console.log(err));
     })
-
+    }
     // Handler functions
     function changePost(postData){
         // Check if is home
